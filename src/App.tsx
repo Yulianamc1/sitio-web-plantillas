@@ -64,13 +64,15 @@ export default function App() {
     return () => clearInterval(timer);
   }, []);
 
-  const handleBuyClick = () => {
-    setIsModalOpen(true);
-    setTimeout(() => {
-      window.open(HOTMART_URL, '_blank');
-      setIsModalOpen(false);
-    }, 2000);
-  };
+const handleBuyClick = () => {
+  (window as any).fbq?.('track', 'InitiateCheckout');
+
+  setIsModalOpen(true);
+  setTimeout(() => {
+    window.open(HOTMART_URL, '_blank');
+    setIsModalOpen(false);
+  }, 2000);
+};
 
   const scrollToId = (id: string) => {
     const element = document.getElementById(id);
