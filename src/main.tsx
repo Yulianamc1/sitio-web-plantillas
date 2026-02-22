@@ -13,7 +13,7 @@ declare global {
 
 (function () {
   const w = window;
-  if (w.fbq) return; // evita duplicado
+  if (w.fbq) return;
 
   (function (f: any, b: any, e: any, v: any, n?: any, t?: any, s?: any) {
     if (f.fbq) return;
@@ -32,8 +32,8 @@ declare global {
     s.parentNode.insertBefore(t, s);
   })(w, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
 
-w.fbq!("init", "1130925549084207");
-w.fbq!("track", "PageView");
+  w.fbq!("init", "1130925549084207");
+  w.fbq!("track", "PageView");
 })();
 
 createRoot(document.getElementById("root")!).render(
