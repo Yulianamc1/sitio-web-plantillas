@@ -90,6 +90,7 @@ const TopBar = () => {
           href={timeLeft > 0 ? "https://pay.hotmart.com/B104505220G" : "#"}
           target={timeLeft > 0 ? "_blank" : "_self"}
           rel="noopener noreferrer"
+          onClick={() => fbq('track','InitiateCheckout')}
           className={`bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-6 rounded-full transition-colors text-sm md:text-base shadow-sm ${timeLeft === 0 ? 'opacity-50 cursor-not-allowed pointer-events-none' : ''}`}
         >
           Comprar ahora
