@@ -153,6 +153,7 @@ const CTAButton = ({ text = "QUIERO MI PROMOCIÓN AHORA", className = "" }) => (
     href="https://pay.hotmart.com/B104505220G"
     target="_blank"
     rel="noopener noreferrer"
+    onClick={() => fbq('track','InitiateCheckout')}
     whileHover={{ scale: 1.05 }}
     whileTap={{ scale: 0.95 }}
     className={`inline-flex flex-col items-center justify-center text-center bg-gradient-to-r from-pink-500 to-purple-600 text-white font-black text-xl md:text-2xl py-4 px-8 md:px-12 rounded-full shadow-[0_10px_25px_rgba(219,39,119,0.5)] hover:shadow-[0_15px_35px_rgba(147,51,234,0.6)] transition-all duration-300 w-full md:w-auto ${className}`}
